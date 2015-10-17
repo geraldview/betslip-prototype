@@ -6,7 +6,7 @@ angular.module('myApp.betslip.bet.bet-directive', ['myApp.betslip.bet.bet-contro
         return {
             restrict: 'E',
             scope: {bet: '='},
-            controller: 'BetslipCtrl',
+            controller: 'BetCtrl',
             templateUrl: 'components/betslip/bet/bet-directive.html'
         };
     });

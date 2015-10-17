@@ -77,3 +77,9 @@ betslip .betslipTotal  {
   font-weight: bold;
   font-size: 14px;
 }
+
+bet span.remove a {
+  float: right;
+  width: 8px;
+  height: 10px;
+}

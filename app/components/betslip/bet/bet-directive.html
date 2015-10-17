@@ -1,6 +1,7 @@
 <div>
-   <span>Selection: {{bet.name}}</span>
-   <div>
+    <span>Selection: {{bet.name}}</span>
+    <span class="remove"><a href="javascript:;" ng-click="removeBet(bet)">X</a></span>
+    <div>
        Stake: <input ng-model="bet.cost">
-   </div>
+    </div>
 </div>
