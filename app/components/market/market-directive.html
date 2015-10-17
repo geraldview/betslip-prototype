@@ -1,0 +1,9 @@
+<div>
+    <div>{{market.name}}</div>
+    <div>{{market.dateTime}}</div>
+    <ul>
+        <li ng-repeat="bet in availableBets" ng-class="{inSlip: betInSlip(bet)}">
+             <a href="javascript:;" ng-click="addToBetslip(bet)">{{bet.name}}</a>
+        </li>
+    </ul>
+</div>

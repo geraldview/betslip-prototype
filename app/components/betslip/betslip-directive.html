@@ -1,0 +1,13 @@
+<div ng-if="!!getBets().length">
+    <span>Betslip ({{getBets().length}})</span>
+    <div ng-repeat="bet in getBets()">
+        <bet bet="bet"></bet>
+    </div>
+    <div><a href="javascript:;" ng-click="resetBetslip()">Clear Betslip</a></div>
+    <div class="betslipTotal">
+        Total Cost: {{totalCost()}}
+    </div>
+</div>
+<div ng-if="!getBets().length">
+    Empty Betslip
+</div>

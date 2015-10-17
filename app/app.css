@@ -1,0 +1,79 @@
+/* app css stylesheet */
+
+.menu {
+  list-style: none;
+  border-bottom: 0.1em solid black;
+  margin-bottom: 2em;
+  padding: 0 0 0.5em;
+}
+
+.menu > li {
+  display: inline;
+}
+
+.menu > li:before {
+  content: "|";
+  padding-right: 0.3em;
+}
+
+.menu > li:nth-child(1):before {
+  content: "";
+  padding: 0;
+}
+
+#prototype {
+  min-height: 600px;
+  display: block;
+  padding-left: 20px;
+}
+
+#main {
+  min-width: 500px;
+  display: inline-block;
+  float: left;
+}
+
+#sidebar {
+  min-width: 200px;
+  display: inline-block;
+}
+
+market li {
+  display: block;
+}
+
+market li a {
+  padding: 2px 5px 2px 5px;
+}
+market li.inSlip a {
+  background: #fed22f;
+}
+
+betslip > div {
+  background: #f2f2f2;
+  padding: 10px 0 10px 0;
+}
+
+betslip a {
+  padding: 5px;
+  font-size: 12px;
+  text-decoration: none;
+  color: white;
+  background: darkgoldenrod;
+}
+
+bet > div {
+  padding: 5px;
+  border: 1px solid #aaaaaa;
+}
+
+bet input {
+  width: 80px;
+  height: 20px;
+}
+
+betslip .betslipTotal  {
+  padding-top: 10px;
+  font-weight: bold;
+  font-size: 14px;
+}
