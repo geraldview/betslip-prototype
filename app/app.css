@@ -9,6 +9,9 @@
 
 .menu > li {
   display: inline;
+  padding-left: 10px;
+  font-weight: bold;
+  font-size: 15px;
 }
 
 .menu > li:before {
@@ -38,24 +41,54 @@
   display: inline-block;
 }
 
+market {
+  font-size: 13px;
+}
+
+market > div > div:first-child {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
 market li {
   display: block;
+  border-bottom: 1px solid lightgreen;
+  width: 350px;
+  line-height: 30px;
+
 }
 
 market li a {
   padding: 2px 5px 2px 5px;
 }
+
+market li > div:first-child {
+  display: inline-block;
+  width: 200px;
+}
+
+market li > div:nth-child(2) {
+  display: inline-block;
+  width: 60px;
+  float: right;
+}
+
 market li.inSlip a {
   background: #fed22f;
 }
 
 betslip > div {
   background: #f2f2f2;
-  padding: 10px 0 10px 0;
+  color: #222222;
+  font-size: 12px;
+  padding: 10px 3px 10px 3px;
+  border: 1px solid lightblue;
+
 }
 
 betslip a {
-  padding: 5px;
+  padding: 2px 5px 5px 5px;
   font-size: 12px;
   text-decoration: none;
   color: white;
@@ -63,13 +96,29 @@ betslip a {
 }
 
 bet > div {
+  margin: 5px 0 5px 0;
   padding: 5px;
-  border: 1px solid #aaaaaa;
+  background: lightyellow;
+  border: 1px solid lightgrey;
 }
 
 bet input {
   width: 80px;
   height: 20px;
+}
+
+betslip > div > span {
+  font-weight: bold;
+  padding-left: 5px;
+}
+
+betslip > div > span:nth-child(2) {
+  border: 1px solid darkgoldenrod;
+  padding: 2px 5px 2px 5px;
+  margin-left: 10px;
+  border-radius: 50%;
+  background: darkgoldenrod;
+  color: white;
 }
 
 betslip .betslipTotal  {

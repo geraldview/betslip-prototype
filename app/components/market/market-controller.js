@@ -11,16 +11,16 @@ angular.module('myApp.market.market-controller', ['myApp.betslip.bet-service'])
         };
 
         $scope.availableBets = [
-            {id: 1, name: '1-0', cost: ''},
-            {id: 2, name: '2-1', cost: ''},
-            {id: 3, name: '3-2', cost: ''},
-            {id: 4, name: '4-3', cost: ''},
-            {id: 5, name: '5-4', cost: ''},
-            {id: 6, name: '3-1', cost: ''},
-            {id: 7, name: '1-1', cost: ''},
-            {id: 8, name: '2-2', cost: ''},
-            {id: 9, name: '4-2', cost: ''},
-            {id: 10, name: '5-3', cost: ''}
+            {id: 1, name: '1-0', price: 2.00, cost: ''},
+            {id: 2, name: '2-1', price: 3.00, cost: ''},
+            {id: 3, name: '3-2', price: 4.00, cost: ''},
+            {id: 4, name: '4-3', price: 5.00, cost: ''},
+            {id: 5, name: '5-4', price: 3.50, cost: ''},
+            {id: 6, name: '3-1', price: 2.50, cost: ''},
+            {id: 7, name: '1-1', price: 1.60, cost: ''},
+            {id: 8, name: '2-2', price: 12.00, cost: ''},
+            {id: 9, name: '4-2', price: 21.00, cost: ''},
+            {id: 10, name: '5-3', price: 25.00, cost: ''}
         ];
 
         $scope.addToBetslip = function(bet) {
@@ -32,4 +32,15 @@ angular.module('myApp.market.market-controller', ['myApp.betslip.bet-service'])
         $scope.betInSlip = function(bet) {
             return betService.betInSlip(bet.id);
         };
+
+        $scope.addAll = function() {
+            if (!!betService.getBets().length) { betService.clearBets(); return; }
+            $scope.availableBets.forEach(function(b) {
+                $scope.addToBetslip(b);
+            });
+        };
+
+        $scope.betslipHasSomething = function() {
+            return !!betService.getBets().length;
+        }
     }]);

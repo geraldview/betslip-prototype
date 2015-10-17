@@ -1,5 +1,5 @@
 <div ng-if="!!getBets().length">
-    <span>Betslip ({{getBets().length}})</span>
+    <span>Betslip</span><span>{{getBets().length}}</span>
     <div ng-repeat="bet in getBets()">
         <bet bet="bet"></bet>
     </div>
@@ -9,5 +9,5 @@
     </div>
 </div>
 <div ng-if="!getBets().length">
-    Empty Betslip
+    <span>Empty Betslip</span>
 </div>

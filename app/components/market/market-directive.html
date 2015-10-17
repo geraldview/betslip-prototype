@@ -3,7 +3,21 @@
     <div>{{market.dateTime}}</div>
     <ul>
         <li ng-repeat="bet in availableBets" ng-class="{inSlip: betInSlip(bet)}">
-             <a href="javascript:;" ng-click="addToBetslip(bet)">{{bet.name}}</a>
+            <div>{{bet.name}}</div>
+            <div>
+                <a href="javascript:;" ng-click="addToBetslip(bet)">{{bet.price | number:2}}</a>
+            </div>
+        </li>
+
+        <li>
+            <div></div>
+            <div>
+                <a href="javascript:;" ng-click="addAll()">
+                    <span ng-if="!betslipHasSomething()">Add All</span>
+                    <span ng-if="betslipHasSomething()">Delete All</span>
+                </a>
+            </div>
         </li>
     </ul>
+
 </div>
