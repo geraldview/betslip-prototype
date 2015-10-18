@@ -87,12 +87,21 @@ betslip > div {
 
 }
 
-betslip a {
+betslip a:first-child {
   padding: 2px 5px 5px 5px;
   font-size: 12px;
   text-decoration: none;
   color: white;
   background: darkgoldenrod;
+}
+
+betslip a:last-child {
+  padding: 2px 5px 5px 5px;
+  font-size: 12px;
+  text-decoration: none;
+  color: white;
+  background: darkslategrey;
+  margin-left: 40px;
 }
 
 bet > div {
@@ -131,4 +140,14 @@ bet span.remove a {
   float: right;
   width: 8px;
   height: 10px;
+  background: darkgoldenrod;
+}
+
+div.betPlaced {
+  padding-top: 20px;
+}
+
+div.betPlaced span {
+  font-weight: bold;
+  font-size: 13px;
 }

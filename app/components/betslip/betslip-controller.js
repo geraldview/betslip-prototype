@@ -2,7 +2,7 @@
  * Created by Gary on 10/17/2015.
  */
 angular.module('myApp.betslip.betslip-controller', [])
-    .controller('BetslipCtrl', ['$scope', 'betService', function($scope, betService) {
+    .controller('BetslipCtrl', ['$scope', '$rootScope', 'betService', function($scope, $rootScope, betService) {
         $scope.getBets = function() {
             return betService.getBets();
         };
@@ -16,5 +16,10 @@ angular.module('myApp.betslip.betslip-controller', [])
                 total += parseFloat(bet.cost || 0);
                 return total;
             }, 0) || 0).toFixed(2);
+        };
+
+        $scope.placeBets = function() {
+            $rootScope.$emit('BET_PLACED', betService.getBets());
+            betService.clearBets();
         };
     }]);

@@ -3,7 +3,10 @@
     <div ng-repeat="bet in getBets()">
         <bet bet="bet"></bet>
     </div>
-    <div><a href="javascript:;" ng-click="resetBetslip()">Clear Betslip</a></div>
+    <div>
+        <a href="javascript:;" ng-click="resetBetslip()">Clear Betslip</a>
+        <a href="javascript:;" ng-click="placeBets()">Place Bets</a>
+    </div>
     <div class="betslipTotal">
         Total Cost: {{totalCost()}}
     </div>

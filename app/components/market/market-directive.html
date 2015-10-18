@@ -20,4 +20,14 @@
         </li>
     </ul>
 
+    <div ng-if="betPlaced" class="betPlaced">
+        <span>Bet Placed</span>
+
+        <ul>
+            <li>ID : Name - Price - Cost</li>
+            <li ng-repeat="b in betPlaced">
+                {{b.id}}: {{b.name}} - {{b.price | number:2}} - {{b.cost | number:2}}
+            </li>
+        </ul>
+    </div>
 </div>

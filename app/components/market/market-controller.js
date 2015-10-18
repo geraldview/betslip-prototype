@@ -2,7 +2,7 @@
  * Created by Gary on 10/17/2015.
  */
 angular.module('myApp.market.market-controller', ['myApp.betslip.bet-service'])
-    .controller('MarketCtrl', ['$scope', 'betService', function($scope, betService) {
+    .controller('MarketCtrl', ['$scope', '$rootScope', 'betService', function($scope, $rootScope, betService) {
         $scope.market = {
             id: 1,
             name: 'Geelong v Hawthorn Correct Scores',
@@ -25,6 +25,7 @@ angular.module('myApp.market.market-controller', ['myApp.betslip.bet-service'])
 
         $scope.addToBetslip = function(bet) {
             delete bet.cost;
+            delete $scope.betPlaced;
             !!betService.getBets().find(function(b) { return b.id === bet.id; }) ?
             betService.removeBet(bet) : betService.addBet(bet);
         };
@@ -42,5 +43,9 @@ angular.module('myApp.market.market-controller', ['myApp.betslip.bet-service'])
 
         $scope.betslipHasSomething = function() {
             return !!betService.getBets().length;
-        }
+        };
+
+        $rootScope.$on('BET_PLACED', function(scope, data) {
+            $scope.betPlaced = data;
+        });
     }]);
