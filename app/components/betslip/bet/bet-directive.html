@@ -1,6 +1,7 @@
-<div>
+<div ng-class="{multi: bet.combin}">
     <span>{{bet.name}} : {{bet.price | number:2}}</span>
-    <span class="remove"><a href="javascript:;" ng-click="removeBet(bet)">X</a></span>
+    <span ng-if="bet.combin > 1">{{bet.combin}} Combin</span>
+    <span class="remove" ng-if="!bet.combin"><a href="javascript:;" ng-click="removeBet(bet)">X</a></span>
     <div>
        Stake: <input ng-model="bet.cost">
     </div>

@@ -111,6 +111,10 @@ bet > div {
   border: 1px solid lightgrey;
 }
 
+bet > div.multi {
+  background: lightblue;
+}
+
 bet input {
   width: 80px;
   height: 20px;
@@ -130,10 +134,13 @@ betslip > div > span:nth-child(2) {
   color: white;
 }
 
-betslip .betslipTotal  {
+betslip .betslipTotal {
   padding-top: 10px;
-  font-weight: bold;
   font-size: 14px;
+}
+
+betslip .betslipTotal span:last-child {
+  font-weight: bold;
 }
 
 bet span.remove a {

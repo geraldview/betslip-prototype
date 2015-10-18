@@ -3,12 +3,19 @@
     <div ng-repeat="bet in getBets()">
         <bet bet="bet"></bet>
     </div>
+
+    <div ng-repeat="multi in getMultiBets()">
+        <bet bet="multi"></bet>
+    </div>
+
     <div>
         <a href="javascript:;" ng-click="resetBetslip()">Clear Betslip</a>
         <a href="javascript:;" ng-click="placeBets()">Place Bets</a>
     </div>
     <div class="betslipTotal">
-        Total Cost: {{totalCost()}}
+        <span>Single Cost: {{totalCost().single}}</span> <br/>
+        <span>Multi Cost: &nbsp; {{totalCost().multi}}</span>   <br/>
+        <span>Total Cost: {{totalCost().total}}</span>
     </div>
 </div>
 <div ng-if="!getBets().length">
